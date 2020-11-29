@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from data_explorer import views as data_explorer_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', data_explorer_views.index),
+    path('<str:model_name>/', data_explorer_views.model),
+    path('<str:model_name>/<str:pk>', data_explorer_views.obj),
 ]

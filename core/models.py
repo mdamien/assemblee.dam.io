@@ -1,6 +1,25 @@
 from django.db import models
 
 
+class Organe(models.Model):
+    xsi_type = models.TextField()
+    uid = models.TextField(primary_key=True)
+    codeType = models.TextField()
+    libelle = models.TextField()
+    libelleEdition = models.TextField(null=True)
+    libelleAbrege = models.TextField()
+    libelleAbrev = models.TextField()
+    viMoDe_dateDebut = models.TextField(null=True)
+    viMoDe_dateAgrement = models.TextField(null=True)
+    viMoDe_dateFin = models.TextField(null=True)
+    organeParent = models.TextField(null=True) # todo: Organe ?
+    chambre = models.TextField(null=True)
+    regime = models.TextField(null=True)
+    legislature = models.TextField(null=True)
+    secretariat_secretaire01 = models.TextField(null=True) # todo: acteurs ?
+    secretariat_secretaire02 = models.TextField(null=True)
+
+
 class Acteur(models.Model):
     uid = models.TextField(primary_key=True)
     etatCivil_ident_civ = models.TextField()
