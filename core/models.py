@@ -43,13 +43,13 @@ class Mandat(models.Model):
     legislature = models.TextField(null=True)
     typeOrgane = models.TextField()
     dateDebut = models.TextField()
-    datePublication = models.TextField()
-    dateFin = models.TextField()
-    preseance = models.TextField()
+    datePublication = models.TextField(null=True)
+    dateFin = models.TextField(null=True)
+    preseance = models.TextField(null=True)
     nominPrincipale = models.TextField()
-    infosQualite_codeQualite = models.TextField()
+    infosQualite_codeQualite = models.TextField(null=True)
     infosQualite_libQualite = models.TextField()
-    infosQualite_libQualiteSex = models.TextField()
+    infosQualite_libQualiteSex = models.TextField(null=True)
     # todo organes
     # todo suppleants
 
